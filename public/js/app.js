@@ -2,7 +2,7 @@ const app = angular.module('TravelApp', [])
 
 app.controller('MainController', ['$http', function($http) {
   this.createForm = {};
-
+  
   this.createTravel = () => {
     $http({
       method:'POST',
