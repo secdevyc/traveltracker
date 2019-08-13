@@ -5,28 +5,28 @@ const Travels = require('../models/travel.js');
 // ========== ROUTES ========== //
 //========= INDEX GET ROUTE ============
 router.get('/', (req, res) => {
-  Travels.find({}, (err, foundEntries) => {
-    res.json(foundEntries)
+  Travels.find({}, (err, foundTravels) => {
+    res.json(foundTravels)
   })
 })
 
 //=========== DELETE ROUTE ==============
 router.delete('/:id', (req, res) => {
-  Travels.findByIdAndRemove(req.params.id, (err, deletedEntry) => {
-    res.json(deletedEntry)
+  Travels.findByIdAndRemove(req.params.id, (err, deletedTravels) => {
+    res.json(deletedTravels)
   })
 })
 
 //=========== EDIT ROUTE =================
 router.put('/:id', (req, res) => {
-  Travels.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedEntry) => {
-    res.json(updatedTodo)
+  Travels.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedTravels) => {
+    res.json(updatedTravels)
   })
 })
 //============ CREATE POST ROUTE ==========
 router.post('/', (req, res) => {
-  Travels.create(req.body, (err, createdEntry) => {
-    res.json(createdEntry);
+  Travels.create(req.body, (err, createdTravels) => {
+    res.json(createdTravels);
   })
 })
 
