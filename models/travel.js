@@ -9,4 +9,5 @@ const travelSchema = mongoose.Schema({
 
 const Travels = mongoose.model('Travels', travelSchema);
 
+
 module.exports = Travels;

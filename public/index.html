@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="TravelApp">
+  <head>
+    <meta charset="utf-8">
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title></title>
+  </head>
+  <!-- body -->
+  <body ng-controller="MainController as ctrl">
+    <div class="container">
+      <h4>My Travel Tracker</h4>
+      <div class="divider"></div>
+      <div class="row">
+        <!-- add travel -->
+        <h5>Add Travel</h5>
+        <!-- form -->
+        <form ng-submit="ctrl.createTravel()" class="col s6">
+          <!-- inputs -->
+          <input ng-model="ctrl.createForm.location" type="text" placeholder="Location">
+          <input ng-model="ctrl.createForm.date" type="text" placeholder="Date Traveled">
+          <input ng-model="ctrl.createForm.pros" type="text" placeholder="Pros">
+          <input ng-model="ctrl.createForm.cons" type="text" placeholder="Cons">
+          <!-- submit btn -->
+          <input class="btn" type="submit" value="Add Travel">
+        </form>
+      </div>
+      <!-- show travel below -->
+    </div>
+  </body>
+</html>
