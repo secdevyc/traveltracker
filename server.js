@@ -17,12 +17,6 @@ mongoose.connection.once('open', () => {
   console.log('connected to mongoose...');
 })
 
-//======= ROUTES ===========
-app.get('/', (req, res) => {
-  res.send('HELLO WORLD')
-})
-
-
 //======= LISTENER ===========
 app.listen(port , (req, res) => {
   console.log('listening......');
