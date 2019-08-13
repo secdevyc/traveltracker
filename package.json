@@ -1,0 +1,24 @@
+{
+  "name": "traveltracker",
+  "version": "1.0.0",
+  "description": "To track your travels",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/secdevyc/traveltracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/secdevyc/traveltracker/issues"
+  },
+  "homepage": "https://github.com/secdevyc/traveltracker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
