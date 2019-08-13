@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const travelSchema = mongoose.Schema({
+const travelSchema = new mongoose.Schema({
   location: String,
   date: String,
   pros: String,
