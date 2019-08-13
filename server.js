@@ -1,6 +1,7 @@
 //======== DEPENDENCIES ========
 const express = require('express')
 const app = express();
+const mongoose = require('mongoose');
 //====== CONFIGURATION ======
 const port = 3000;
 
