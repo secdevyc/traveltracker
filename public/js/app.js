@@ -9,7 +9,7 @@ app.controller('MainController', ['$http', function($http) {
       url:'/traveltracker',
       data: this.createForm
     }).then(response => {
-      console.log(response.data);
+      this.getTravels();
     }, error => {
       console.log(error);
     })
@@ -30,10 +30,10 @@ app.controller('MainController', ['$http', function($http) {
 //============================
 //======     DELETE   ========
 //============================
-      this.deleteTracker = (travel) => {
+      this.deleteTravel = (travel) => {
           $http({
               method: "DELETE",
-              url: "/traveltracker/" + travels._id
+              url: "/traveltracker/" + travel._id
           }).then((response) => {
               this.getTravels();
           }, (error) => {
