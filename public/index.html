@@ -28,6 +28,9 @@
           <!-- submit btn -->
           <input class="btn" type="submit" value="Add Travel">
         </form>
+        <div ng-repeat="travel in ctrl.travels">
+          <span>{{travel.location}}</span>
+        </div>
       </div>
       <!-- show travel below -->
     </div>
