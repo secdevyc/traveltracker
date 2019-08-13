@@ -1,9 +1,8 @@
-conste express = require('express');
+const express = require('express');
 const router = express.Router();
-//connect model here
+const Travels = require('../models/travel.js');
 
 // ========== ROUTES ========== //
-
 
 // ========== EXPORT ========== //
 module.exports = router;
