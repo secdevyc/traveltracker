@@ -10,7 +10,7 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 app.use(morgan('tiny'))
-
+app.use(express.static('public'))
 //========== CONTROLLERS ==========//
 const travelsController = require('./controllers/travel.js');
 app.use('/traveltracker', travelsController);
