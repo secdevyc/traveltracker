@@ -2,7 +2,23 @@ const app = angular.module('TravelApp', [])
 
 app.controller('MainController', ['$http', function($http) {
   this.createForm = {};
-
+  //============================
+//======     PUT      ========
+//============================
+    this.updateTravel = (travel) => {
+      $http({
+          method: "PUT",
+          url: "/traveltracker/" + travel._id,
+          data: {}
+      }).then((response) => {
+          this.getTravels();
+      }, (error) => {
+          console.log(error);
+      })
+    } //end updateTravel();
+  //============================
+  //======     CREATE   ========
+  //============================
   this.createTravel = () => {
     $http({
       method:'POST',
@@ -39,7 +55,7 @@ app.controller('MainController', ['$http', function($http) {
           }, (error) => {
               console.log(error);
           })
-      }
+      } //end deleteTravel();
 
 this.getTravels(); //retrieving db on page load
 }])// end controller
