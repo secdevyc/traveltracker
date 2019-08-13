@@ -20,6 +20,8 @@
   "homepage": "https://github.com/secdevyc/traveltracker#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.6.9"
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.9",
+    "morgan": "^1.9.1"
   }
 }
