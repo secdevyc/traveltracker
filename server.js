@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const port = 3000;
 
 app.use(express.json());
+app.use(express.static('public'));
 
 //========== CONTROLLERS ==========//
 const travelsController = require('./controllers/travel.js');
