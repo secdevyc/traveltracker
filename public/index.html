@@ -6,10 +6,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
     <script src="/js/app.js" charset="utf-8"></script>
     <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <title></title>
   </head>
   <body ng-controller="MainController as ctrl">
-    <h4>My Travel Tracker</h4>
+    <div class="container">
+      <h4>My Travel Tracker</h4>
+      <div class="row">
+        <h5>Add Travel</h5>
+        <form class="col s6">
+          <input type="text" placeholder="Location">
+          <input type="text" placeholder="Date Traveled">
+          <input type="text" placeholder="Pros">
+          <input type="text" placeholder="Cons">
+          <input class="btn" type="submit" value="Add Travel">
+        </form>
+      </div>
+    </div>
   </body>
 </html>
