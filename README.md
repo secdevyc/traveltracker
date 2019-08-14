@@ -3,19 +3,21 @@ To track your travels
 Keep record of your travel
 
 
-**locations**
+* **locations**
 
 
-**dates**
+* **dates**
 
 
-**pros** of traveling to that location
+* **pros** of traveling to that location
 
 
-**cons** of traveling to that location
+* **cons** of traveling to that location
 
 ## Collaborators
 Alex Hawkins & Yulli Chong
+
+
 
 ### User Stories
 1. User should be able to create a travel entry
