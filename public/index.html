@@ -6,6 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js" charset="utf-8"></script>
     <script src="/js/app.js" charset="utf-8"></script>
     <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <title></title>
@@ -14,8 +15,6 @@
   <body ng-controller="MainController as ctrl">
     <div class="container">
       <h4>My Travel Tracker</h4>
-      <div class="divider"></div>
-      <div class="row">
         <!-- add travel -->
         <h5>Add Travel</h5>
         <!-- form -->
@@ -26,16 +25,19 @@
           <input ng-model="ctrl.createForm.pros" type="text" placeholder="Pros">
           <input ng-model="ctrl.createForm.cons" type="text" placeholder="Cons">
           <!-- submit btn -->
-          <input class="btn" type="submit" value="Add Travel">
+          <input class="btn-small" type="submit" value="Add Travel">
         </form>
         <!-- ==== GET DB ===== -->
-        <div ng-repeat="travel in ctrl.travels">
+        <br/>
+        <h5>Where I've Traveled</h5>
+        <div class="where-traveled" ng-repeat="travel in ctrl.travels">
           <span ng-click="ctrl.indexOfShowInfo = $index"
-                ng-dblclick="ctrl.indexOfShowInfo = null">Location: {{travel.location}}</span><br />
+                ng-dblclick="ctrl.indexOfShowInfo = null"><h6>Location: {{travel.location}}</h6></span>
           <!-- delete travel -->
-          <button ng-click="ctrl.deleteTravel(travel)">delete travel</button>
+          <button class="btn-small" ng-click="ctrl.deleteTravel(travel)">delete travel</button>
           <!-- edit travel -->
-          <button ng-click="ctrl.indexOfShowEditForm = $index">edit travel</button>
+          <button class="btn-small" ng-click="ctrl.indexOfShowEditForm = $index">edit travel</button>
+          <!-- form to edit -->
           <form ng-submit="ctrl.updateTravel(travel)"
                 class="col s6"
                 ng-if="$index === ctrl.indexOfShowEditForm">
@@ -50,16 +52,16 @@
           <!-- show/hide on clicks --->
           <div ng-if="$index === ctrl.indexOfShowInfo">
             <span>Date: {{travel.date}}</span>
-            <ul>PROS
+            <ul><h6>PROS</h6>
               <li>{{travel.pros}}</li>
             </ul>
-            <ul>CONS
+            <ul><h6>CONS</h6>
               <li>{{travel.cons}}</li>
             </ul>
+            <br/>
+            <div class="divider"></div>
           </div>
         </div>
-      </div>
-      <!-- show travel below -->
     </div>
   </body>
 </html>
