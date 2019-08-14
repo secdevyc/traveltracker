@@ -1,6 +1,8 @@
 # Traveltracker
 To track your travels
-Keep record of your travel
+
+
+Keep record of your travel:
 
 
 * **locations**
