@@ -30,6 +30,7 @@ app.controller('MainController', ['$http', function($http) {
       url:'/traveltracker',
       data: this.createForm
     }).then(response => {
+      this.createForm = {};
       this.getTravels();
     }, error => {
       console.log(error);
