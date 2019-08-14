@@ -20,9 +20,9 @@ Alex Hawkins & Yulli Chong
 8. User should be able to see updated travel after editing and clicking "update travel"
 
 ### Technologies
-..* Mongoose
-..* Express
-..* Angular
-..* Node.js
+* Mongoose
+* Express
+* Angular
+* Node.js
 
-..* CSS - Materialize Framework
+* CSS - Materialize Framework
