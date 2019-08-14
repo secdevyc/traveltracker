@@ -2,15 +2,20 @@ const app = angular.module('TravelApp', [])
 
 app.controller('MainController', ['$http', function($http) {
   this.createForm = {};
-  //============================
+  this.updatedTravel = {};
+  this.indexOfShowInfo = null;
+  this.indexOfShowEditForm = null;
+
+//============================
 //======     PUT      ========
 //============================
     this.updateTravel = (travel) => {
       $http({
           method: "PUT",
           url: "/traveltracker/" + travel._id,
-          data: {}
+          data: this.updatedTravel
       }).then((response) => {
+          this.indexOfShowEditForm = null;
           this.getTravels();
       }, (error) => {
           console.log(error);
@@ -38,6 +43,7 @@ app.controller('MainController', ['$http', function($http) {
         method: 'GET',
         url: '/traveltracker',
     }).then((response) => {
+        console.log(response.data);
         this.travels = response.data
     }, (error) => {
         console.log(error);
