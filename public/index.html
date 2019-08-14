@@ -32,6 +32,8 @@
         <div ng-repeat="travel in ctrl.travels">
           <span ng-click="ctrl.indexOfShowInfo = $index"
                 ng-dblclick="ctrl.indexOfShowInfo = null">Location: {{travel.location}}</span><br />
+          <!-- delete travel -->
+          <button ng-click="ctrl.deleteTravel(travel)">delete travel</button>
           <!-- show/hide on clicks --->
           <div ng-if="$index === ctrl.indexOfShowInfo">
             <span>Date: {{travel.date}}</span>
