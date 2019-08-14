@@ -34,6 +34,19 @@
                 ng-dblclick="ctrl.indexOfShowInfo = null">Location: {{travel.location}}</span><br />
           <!-- delete travel -->
           <button ng-click="ctrl.deleteTravel(travel)">delete travel</button>
+          <!-- edit travel -->
+          <button ng-click="ctrl.indexOfShowEditForm = $index">edit travel</button>
+          <form ng-submit="ctrl.updateTravel(travel)"
+                class="col s6"
+                ng-if="$index === ctrl.indexOfShowEditForm">
+            <!-- inputs -->
+            <input ng-model="ctrl.updatedTravel.location" type="text" ng-value="travel.location">
+            <input ng-model="ctrl.updatedTravel.date" type="text" ng-value="travel.date">
+            <input ng-model="ctrl.updatedTravel.pros" type="text" ng-value="travel.pros">
+            <input ng-model="ctrl.updatedTravel.cons" type="text" ng-value="travel.cons">
+            <!-- submit btn -->
+            <input class="btn" type="submit" value="Update Travel">
+          </form>
           <!-- show/hide on clicks --->
           <div ng-if="$index === ctrl.indexOfShowInfo">
             <span>Date: {{travel.date}}</span>
