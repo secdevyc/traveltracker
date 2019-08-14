@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lexend Exa', sans-serif;
+  background-color: #c6e2ff;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form{
+  max-width: 50%;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px teal;
+  background-color: ghostwhite;
+}
+.where-traveled{
+  text-align: left;
+}
