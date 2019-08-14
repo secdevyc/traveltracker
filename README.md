@@ -33,7 +33,18 @@ Alex Hawkins & Yulli Chong
 
 ### Technologies
 * Mongoose
+
 * Express
+
 * Angular
+  * ng-repeat
+  * ng-click
+  * ng-dblclick
+  * ng-model
+  * ng-submit
+  * ng-value
+  * ng-if
+  
 * Node.js
+
 * CSS - Materialize Framework
